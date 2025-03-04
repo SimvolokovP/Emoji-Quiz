@@ -1,0 +1,12 @@
+.emojis-question {
+  display: flex;
+  gap: 8px;
+  width: 300px;
+  margin-bottom: 8px;
+
+  &__item {
+    border-bottom: 4px solid #ffffff;
+    padding-bottom: 4px;
+    width: 100%;
+  }
+}

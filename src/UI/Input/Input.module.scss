@@ -1,0 +1,35 @@
+.inputContainer {
+  position: relative;
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.inputPlaceholder {
+  position: absolute;
+  color: #ffffff;
+  bottom: 12px;
+  transition: all 0.2s ease-in-out;
+  font-size: 24px;
+  transform: translateY(0);
+  pointer-events: none;
+  font-weight: 300;
+}
+
+.inputPlaceholderActive {
+  transform: translateY(-150%);
+  font-size: 16px;
+}
+
+.inputInput {
+  min-height: 40px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  border-bottom: 4px solid #ffffff;
+  width: 100%;
+  padding-right: 16px;
+  font-size: 22px;
+}
