@@ -1,10 +1,10 @@
-import QuizPage from "./pages/QuizPage/QuizPage";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
     <main>
       <div className="container">
-        <QuizPage />
+        <AppRouter />
       </div>
     </main>
   );

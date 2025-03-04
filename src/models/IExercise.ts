@@ -116,4 +116,84 @@ export const exercises: IExercise[] = [
       { label: "mask", symbol: "😷" },
     ],
   },
+  {
+    id: 11,
+    answer: { answerEng: "Toy Story", answerRu: "История игрушек" },
+    emojis: [
+      { label: "toy", symbol: "🧸" },
+      { label: "cowboy", symbol: "🤠" },
+      { label: "spaceship", symbol: "🚀" },
+      { label: "dinosaur", symbol: "🦖" },
+    ],
+  },
+  {
+    id: 12,
+    answer: { answerEng: "Avatar", answerRu: "Аватар" },
+    emojis: [
+      { label: "alien", symbol: "👽" },
+      { label: "nature", symbol: "🌿" },
+      { label: "blue", symbol: "💙" },
+      { label: "spaceship", symbol: "🚀" },
+    ],
+  },
+  {
+    id: 13,
+    answer: { answerEng: "The Godfather", answerRu: "Крестный отец" },
+    emojis: [
+      { label: "family", symbol: "👪" },
+      { label: "crime", symbol: "💼" },
+      { label: "gun", symbol: "🔫" },
+      { label: "pasta", symbol: "🍝" },
+    ],
+  },
+  {
+    id: 14,
+    answer: { answerEng: "Inception", answerRu: "Начало" },
+    emojis: [
+      { label: "dream", symbol: "💭" },
+      { label: "maze", symbol: "🌀" },
+      { label: "top", symbol: "🪅" },
+      { label: "night", symbol: "🌙" },
+    ],
+  },
+  {
+    id: 16,
+    answer: { answerEng: "The Avengers", answerRu: "Мстители" },
+    emojis: [
+      { label: "superhero", symbol: "🦸‍♂️" },
+      { label: "suit", symbol: "🤵" },
+      { label: "shield", symbol: "🛡️" },
+      { label: "team", symbol: "👥" },
+    ],
+  },
+  {
+    id: 17,
+    answer: { answerEng: "Shrek", answerRu: "Шрек" },
+    emojis: [
+      { label: "ogre", symbol: "👹" },
+      { label: "princess", symbol: "👸" },
+      { label: "donkey", symbol: "🐴" },
+      { label: "swamp", symbol: "🦠" },
+    ],
+  },
+  {
+    id: 18,
+    answer: { answerEng: "The Dark Knight", answerRu: "Темный рыцарь" },
+    emojis: [
+      { label: "bat", symbol: "🦇" },
+      { label: "city", symbol: "🌆" },
+      { label: "villain", symbol: "🦹‍♂️" },
+      { label: "car", symbol: "🚗" },
+    ],
+  },
+  {
+    id: 20,
+    answer: { answerEng: "Minions", answerRu: "Миньоны" },
+    emojis: [
+      { label: "minion", symbol: "👶" },
+      { label: "goggles", symbol: "🕶️" },
+      { label: "banana", symbol: "🍌" },
+      { label: "mischief", symbol: "😈" },
+    ],
+  },
 ];

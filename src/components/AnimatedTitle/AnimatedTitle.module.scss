@@ -1,0 +1,19 @@
+.title {
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 6px ;
+  align-items: center;
+  font-size: 16px;
+
+  & h1 {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  & span {
+    width: 50px;
+  }
+}

@@ -1,0 +1,15 @@
+.main-page {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  
+}
