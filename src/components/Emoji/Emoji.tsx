@@ -9,7 +9,7 @@ interface EmojiProps {
 const Emoji: FC<EmojiProps> = ({ label, symbol, fontSize = 14 }) => {
   return (
     <span
-      style={{ fontSize: fontSize }}
+      style={{ fontSize: fontSize, userSelect: "none" }}
       className="emoji"
       role="img"
       aria-label={label ? label : ""}

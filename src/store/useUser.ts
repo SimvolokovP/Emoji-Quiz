@@ -7,7 +7,7 @@ interface UserState {
 }
 
 export const useUser = create<UserState>((set) => ({
-  user: { username: "" },
+  user: { username: "", score: 0, id: new Date().getTime().toString() },
   setUsername: (username: string) => {
     set((state) => ({
       user: state.user ? { ...state.user, username } : null,

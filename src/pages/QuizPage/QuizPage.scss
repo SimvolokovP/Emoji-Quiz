@@ -1,0 +1,15 @@
+.quiz-page {
+  display: flex;
+  flex-direction: column;
+
+  &__username {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  & button {
+    margin-bottom: 8px;
+  }
+}

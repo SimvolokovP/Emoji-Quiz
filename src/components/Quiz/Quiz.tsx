@@ -6,7 +6,7 @@ import "./Quiz.scss";
 import Input from "../../UI/Input/Input";
 import { FakeApi } from "../../api/ExercisesApi/FakeApi";
 import QuizStats from "../QuizStats/QuizStats";
-import { useUser } from "../../store/useUser";
+import { toast, ToastContainer } from "react-toastify";
 
 const Quiz = () => {
   const [exercise, setExercise] = useState<IExercise | null>(null);
@@ -15,8 +15,6 @@ const Quiz = () => {
   const [targetAnswer, setTargetAnswer] = useState<string>("");
   const [timer, setTimer] = useState<number>(8);
   const [score, setScore] = useState<number>(0);
-
-  const { user } = useUser();
 
   const getExercise = async () => {
     const item = await FakeApi.fetchExercise();
@@ -38,9 +36,11 @@ const Quiz = () => {
           if (step < (exercise?.emojis.length || 0)) {
             setStep(step + 1);
           } else {
+            toast.error("Success");
             setRound(round + 1);
             setStep(1);
           }
+
           return 8;
         }
         return time - 1;
@@ -62,6 +62,7 @@ const Quiz = () => {
       setStep(1);
       setTargetAnswer("");
       setScore((prev) => prev + (+exercise.emojis.length + 1 - step));
+      toast.success(`Yes, it is "${exercise.answer.answerEng}"`);
     }
   };
 
@@ -75,6 +76,7 @@ const Quiz = () => {
         value={targetAnswer}
         onChange={handleChange}
       />
+      <ToastContainer />
     </div>
   );
 };
