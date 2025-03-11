@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import Input from "../../UI/Input/Input";
 import { useUser } from "../../store/useUser";
 import { useNavigate } from "react-router-dom";
@@ -9,7 +9,6 @@ import Button from "../../UI/Button/Button";
 import AnimatedPage from "../../components/AnimatedPage/AnimatedPage";
 import Modal from "../../UI/Modal/Modal";
 import { useTranslation } from "react-i18next";
-import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
 import SettingsBox from "../../components/SettingsBox/SettingsBox";
 
 const MainPage = () => {

@@ -10,6 +10,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
+
 const Quiz = () => {
   const [exercise, setExercise] = useState<IExercise | null>(null);
   const [step, setStep] = useState<number>(1);
