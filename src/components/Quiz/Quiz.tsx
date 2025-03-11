@@ -8,6 +8,7 @@ import { FakeApi } from "../../api/ExercisesApi/FakeApi";
 import QuizStats from "../QuizStats/QuizStats";
 import { toast, ToastContainer } from "react-toastify";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const Quiz = () => {
   const [exercise, setExercise] = useState<IExercise | null>(null);
@@ -19,6 +20,8 @@ const Quiz = () => {
 
   const { t, i18n } = useTranslation();
 
+  const navigate = useNavigate();
+
   const getExercise = async () => {
     const item = await FakeApi.fetchExercise();
     setExercise(item);
@@ -28,6 +31,13 @@ const Quiz = () => {
 
   useEffect(() => {
     getExercise();
+  }, [round]);
+
+  useEffect(() => {
+    if (round >= 11) {
+      localStorage.setItem("record", score.toString());
+      navigate("/congratulation");
+    }
   }, [round]);
 
   useEffect(() => {

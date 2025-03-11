@@ -2,6 +2,7 @@ import { AnimatePresence } from "framer-motion";
 import { Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage";
 import QuizPage from "./pages/QuizPage/QuizPage";
+import CongratulationPage from "./pages/CongratulationPage/CongratulationPage";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<MainPage />} />
             <Route path="/:id" element={<QuizPage />} />
+            <Route path="/congratulation" element={<CongratulationPage />} />
           </Routes>
         </AnimatePresence>
       </div>
