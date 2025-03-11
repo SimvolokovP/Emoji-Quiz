@@ -1,0 +1,13 @@
+.congratulation-page {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__record {
+    color: #ffffff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+  }
+}
