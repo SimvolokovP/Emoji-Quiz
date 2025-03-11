@@ -4,8 +4,11 @@
   gap: 8px;
   
   &__score {
-    position: absolute;
-    left: 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
   }
 
 }

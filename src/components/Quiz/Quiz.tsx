@@ -7,6 +7,7 @@ import Input from "../../UI/Input/Input";
 import { FakeApi } from "../../api/ExercisesApi/FakeApi";
 import QuizStats from "../QuizStats/QuizStats";
 import { toast, ToastContainer } from "react-toastify";
+import { useTranslation } from "react-i18next";
 
 const Quiz = () => {
   const [exercise, setExercise] = useState<IExercise | null>(null);
@@ -15,6 +16,8 @@ const Quiz = () => {
   const [targetAnswer, setTargetAnswer] = useState<string>("");
   const [timer, setTimer] = useState<number>(8);
   const [score, setScore] = useState<number>(0);
+
+  const { t, i18n } = useTranslation();
 
   const getExercise = async () => {
     const item = await FakeApi.fetchExercise();
@@ -36,7 +39,12 @@ const Quiz = () => {
           if (step < (exercise?.emojis.length || 0)) {
             setStep(step + 1);
           } else {
-            toast.error("Success");
+            const correctAnswer =
+              i18n.language === "ru"
+                ? exercise?.answer.answerRu
+                : exercise?.answer.answerEng;
+
+            toast.error(`${t("error")} "${correctAnswer}"`);
             setRound(round + 1);
             setStep(1);
           }
@@ -58,21 +66,27 @@ const Quiz = () => {
       value.toLowerCase() === exercise?.answer.answerRu.toLowerCase() ||
       value.toLowerCase() === exercise?.answer.answerEng.toLowerCase()
     ) {
+      const correctAnswer =
+        i18n.language === "ru"
+          ? exercise?.answer.answerRu
+          : exercise?.answer.answerEng;
       setRound((prev) => prev + 1);
       setStep(1);
       setTargetAnswer("");
       setScore((prev) => prev + (+exercise.emojis.length + 1 - step));
-      toast.success(`Yes, it is "${exercise.answer.answerEng}"`);
+      toast.success(`"${correctAnswer}"`);
     }
   };
 
   return (
     <div className="quiz">
       <QuizStats round={round} timer={timer} />
+      <div className="quiz__score">{score}</div>
       {exercise && <EmojisQuestion emojis={exercise?.emojis} step={step} />}
+
       <Input
         type="text"
-        placeholder="Your answer"
+        placeholder={t("answer")}
         value={targetAnswer}
         onChange={handleChange}
       />

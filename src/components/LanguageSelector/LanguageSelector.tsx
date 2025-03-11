@@ -12,8 +12,8 @@ const LanguageSelector: FC = () => {
 
   return (
     <select onChange={handleLanguageChange} defaultValue={i18n.language}>
-      <option value="en">English</option>
-      <option value="ru">Русский</option>
+      <option value="en">English 🇬🇧</option>
+      <option value="ru">Русский 🇷🇺</option>
     </select>
   );
 };

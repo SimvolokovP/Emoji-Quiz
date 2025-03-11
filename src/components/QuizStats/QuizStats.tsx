@@ -1,6 +1,7 @@
 import { FC } from "react";
 
-import './QuizStats.scss'
+import "./QuizStats.scss";
+import { useTranslation } from "react-i18next";
 
 interface QuizStatsProps {
   round: number;
@@ -8,11 +9,14 @@ interface QuizStatsProps {
 }
 
 const QuizStats: FC<QuizStatsProps> = ({ round, timer }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="quiz-stats">
-      <div className="quiz-stats__round">Round № {round}</div>
-      <span>/</span>
-      <div className="quiz-stats__timer">{timer}</div>
+      <div className="quiz-stats__round">
+        {t("round")} № {round}
+      </div>
+      <div className="quiz-stats__timer">⏳ {timer}</div>
     </div>
   );
 };
