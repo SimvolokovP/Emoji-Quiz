@@ -2,17 +2,20 @@
   "name": "emoji-quiz",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://SimvolokovP.github.io/Emoji-Quiz",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@tsparticles/engine": "^3.8.1",
     "framer-motion": "^12.4.10",
     "fuzzyset.js": "^1.0.7",
+    "gh-pages": "^6.3.0",
     "i18next": "^24.2.2",
     "motion": "^12.4.10",
     "react": "^19.0.0",
